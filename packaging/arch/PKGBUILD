@@ -1,0 +1,21 @@
+# Maintainer: ToxesFoxes <toxes_foxes@outlook.com>
+pkgname=plasma6-applets-panel-passthrough
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="KDE Plasma 6 widget that makes a whole panel click-through"
+arch=('x86_64')
+url="https://github.com/ToxesFoxes/plasma-panel-passthrough"
+license=('GPL-2.0-or-later')
+depends=('plasma-workspace' 'qt6-base' 'qt6-declarative')
+makedepends=('cmake' 'extra-cmake-modules' 'git')
+source=("git+$url.git#tag=v$pkgver")
+sha256sums=('SKIP')
+
+build() {
+    cmake -B build -S plasma-panel-passthrough -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+    cmake --build build
+}
+
+package() {
+    DESTDIR="$pkgdir" cmake --install build
+}

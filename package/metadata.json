@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "ToxesFoxes",
+                "Email": "toxes_foxes@outlook.com"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Makes the whole panel click-through outside edit mode",
+        "Description[ru]": "Делает всю панель прозрачной для кликов вне режима правки",
+        "Icon": "input-mouse",
+        "Id": "kz.toxesfoxes.panelpassthrough",
+        "License": "GPL-2.0-or-later",
+        "Name": "Panel Passthrough",
+        "Name[ru]": "Клики сквозь панель",
+        "Version": "1.0",
+        "Website": "https://github.com/ToxesFoxes/plasma-panel-passthrough",
+        "BugReportUrl": "https://github.com/ToxesFoxes/plasma-panel-passthrough/issues"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
