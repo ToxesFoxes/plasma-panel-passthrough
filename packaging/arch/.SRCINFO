@@ -1,0 +1,20 @@
+pkgbase = plasma6-applets-panel-passthrough
+	pkgdesc = KDE Plasma 6 widget that makes a whole panel click-through on Wayland
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/ToxesFoxes/plasma-panel-passthrough
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = glibc
+	depends = libgcc
+	depends = libstdc++
+	depends = qt6-base
+	depends = qt6-declarative
+	depends = libplasma
+	depends = kirigami
+	source = plasma6-applets-panel-passthrough-1.0.0.tar.gz::https://github.com/ToxesFoxes/plasma-panel-passthrough/archive/refs/tags/v1.0.0.tar.gz
+	sha256sums = d5d70b1e8a33be0db499a2ed9f9c00eea94f812cccc906f1e2ebef0ff4b55f07
+
+pkgname = plasma6-applets-panel-passthrough

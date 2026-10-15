@@ -2,17 +2,19 @@
 pkgname=plasma6-applets-panel-passthrough
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="KDE Plasma 6 widget that makes a whole panel click-through"
+pkgdesc="KDE Plasma 6 widget that makes a whole panel click-through on Wayland"
 arch=('x86_64')
 url="https://github.com/ToxesFoxes/plasma-panel-passthrough"
 license=('GPL-2.0-or-later')
-depends=('plasma-workspace' 'qt6-base' 'qt6-declarative')
-makedepends=('cmake' 'extra-cmake-modules' 'git')
-source=("git+$url.git#tag=v$pkgver")
-sha256sums=('SKIP')
+depends=('glibc' 'libgcc' 'libstdc++' 'qt6-base' 'qt6-declarative' 'libplasma' 'kirigami')
+makedepends=('cmake' 'extra-cmake-modules')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('d5d70b1e8a33be0db499a2ed9f9c00eea94f812cccc906f1e2ebef0ff4b55f07')
 
 build() {
-    cmake -B build -S plasma-panel-passthrough -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+    cmake -B build -S "plasma-panel-passthrough-$pkgver" \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=None
     cmake --build build
 }
 
